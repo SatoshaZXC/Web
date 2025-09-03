@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Профіль Steam (Пародія)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #d1d5db;
+      overflow-x: hidden;
+    }
+
+    /* Відеофон */
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.85;
+    }
+
+    /* Контейнер профілю */
+    .profile-container {
+      position: relative;
+      padding: 30px;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: rgba(58, 58, 58, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Верхня частина профілю */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    /* Аватар */
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      margin-right: 20px;
+      border: 2px solid #222;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Інформація про користувача */
+    .user-info {
+      flex-grow: 1;
+    }
+
+    .user-info .username {
+      font-size: 32px;
+      margin: 0;
+      color: #f3f4f6;
+    }
+
+    /* Блок про себе */
+    .about {
+      font-size: 14px;
+      margin-top: 6px;
+      color: #9ca3af;
+      max-width: 600px;
+    }
+
+    /* Круглий рівень */
+    .level-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #1f2937 60%, #000000 100%);
+      color: #f9fafb;
+      border: 3px solid #3b82f6;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 22px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+      margin-left: auto;
+    }
+
+    /* Заслуги */
+    .achievements-block {
+      background-color: rgba(28, 28, 28, 0.8);
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
+      border-left: 4px solid #3b82f6;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .achievements-block h3 {
+      margin: 0 0 10px 0;
+      color: #f3f4f6;
+      font-size: 18px;
+    }
+
+    .achievements-block p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    /* Розділи */
+    .badge-section h2,
+    .showcase h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #f3f4f6;
+    }
+
+    /* Бейджі */
+    .badges img {
+      width: 64px;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #222;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .badges img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Вітрина */
+    .showcase-content {
+      width: 100%;
+      max-width: 800px;
+      border: 2px solid #1f2937;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .showcase-content video {
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Відеофон -->
+  <video class="background-video" autoplay loop muted>
+    <source src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2420110/80e7f0f7396214673b208849b1e03a17df011585.mp4" type="video/mp4">
+    Ваш браузер не підтримує відео.
+  </video>
+
+  <div class="profile-container">
+    <div class="profile-header">
+      <!-- Аватар -->
+      <img src="media/avatar.jpg" alt="Аватар" class="avatar">
+      
+      <!-- Ім’я + опис -->
+      <div class="user-info">
+        <h1 class="username">Котов Олександр Миколайович</h1>
+        <p class="about">Моя мета — довести, що у будь-якої гри є секретний спосіб пройти її через «Alt+F4».</p>
+      </div>
+
+      <!-- Рівень -->
+      <div class="level-container">19</div>
+    </div>
+
+    <!-- Заслуги викладача -->
+   <div class="achievements-block">
+    <h3>👨‍🏫 Про викладача</h3>
+  	<p>🏛 Липовий Державний Інститут Віртуальних Досягнень</p>
+  	<p>🔬 15 років досліджую вплив кави на швидкість завантаження Windows</p>
+  	<p>🎮 Автор курсу: «Історія Steam-бейджів від Half-Life до Cyberpunk»</p>
+  	<p>🏆 Лауреат премії "Золотий Ctrl+C" за видатні досягнення у копіюванні коду</p>
+  	<p>📜 Власник 128 “почесних” дипломів, з яких 127 роздруковані на принтері</p>
+   </div>
+
+
+   
+<!-- Розділ Групи -->
+<div class="groups-section">
+  <h2>Групи, в яких я викладаю</h2>
+  <div class="groups-grid">
+    <div class="group">
+      <div class="group-name">Кібернетика 101</div>
+      <div class="group-desc">Перший курс з основ програмування та кібербезпеки.</div>
+    </div>
+    <div class="group">
+      <div class="group-name">Алгоритми та структури даних</div>
+      <div class="group-desc">Розбір алгоритмів, сортування та ефективного кодування.</div>
+    </div>
+    <div class="group">
+      <div class="group-name">Історія ігор</div>
+      <div class="group-desc">Вивчення еволюції ігрової індустрії та значимих досягнень.</div>
+    </div>
+    <div class="group">
+      <div class="group-name">Віртуальні лабораторії</div>
+      <div class="group-desc">Практичні заняття з онлайн-експериментами та симуляціями.</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.groups-section {
+  margin-top: 30px;
+}
+
+.groups-section h2 {
+  color: #f3f4f6;
+}
+
+.groups-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.group {
+  background-color: rgba(28,28,28,0.85);
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #3b82f6;
+  width: 100%;
+  max-width: 458px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.group:hover {
+  transform: scale(1.03);
+}
+
+.group-name {
+  font-weight: bold;
+  color: #f3f4f6;
+  margin-bottom: 4px;
+}
+
+.group-desc {
+  font-size: 13px;
+  color: #d1d5db;
+}
+</style>
+
+<!-- Обёртка всей секции -->
+<div class="achievements-section">
+
+<!-- Общий контейнер -->
+<div class="achievements-links-wrapper">
+
+  <!-- Левый блок: ачивки -->
+  <div class="achievements-left">
+    <h2>Вітрина досягнень</h2>
+    <div class="achievements-grid">
+      <!-- Пример одной ачивки -->
+      <div class="achievement rare">
+        <div class="emoji">☕</div>
+        <div class="text">
+          <div class="title">Кавовий Оверклокер</div>
+          <div class="desc">Випив 12 кружок кави за пару, щоб довести, що Windows вантажиться швидше.</div>
+        </div>
+        <div class="percent">2%</div>
+      </div>
+
+      <div class="achievement">
+        <div class="emoji">🧠</div>
+        <div class="text">
+          <div class="title">Гуру Alt+F4</div>
+          <div class="desc">Довів, що будь-яка проблема вирішується, якщо достатньо сильно натиснути Alt+F4.</div>
+        </div>
+        <div class="percent">12%</div>
+      </div>
+
+      <div class="achievement rare">
+        <div class="emoji">📄</div>
+        <div class="text">
+          <div class="title">Дипломоман</div>
+          <div class="desc">Отримав 128 дипломів, 127 з яких надрукував сам.</div>
+        </div>
+        <div class="percent">3%</div>
+      </div>
+
+      <div class="achievement">
+        <div class="emoji">🔧</div>
+        <div class="text">
+          <div class="title">Драйвер Містік</div>
+          <div class="desc">Встановив драйвер, який взагалі не існує, і змусив Windows працювати швидше.</div>
+        </div>
+        <div class="percent">15%</div>
+      </div>
+
+      <div class="achievement">
+        <div class="emoji">🎮</div>
+        <div class="text">
+          <div class="title">Steam-археолог</div>
+          <div class="desc">Зібрав усі бейджі з епохи Half-Life 2 до Cyberpunk 2077.</div>
+        </div>
+        <div class="percent">8%</div>
+      </div>
+
+      <div class="achievement">
+        <div class="emoji">🏆</div>
+        <div class="text">
+          <div class="title">Ctrl+C Майстер</div>
+          <div class="desc">Лауреат премії «Золотий Ctrl+C» за видатні досягнення у копіюванні коду.</div>
+        </div>
+        <div class="percent">7%</div>
+      </div>
+
+      <div class="achievement rare">
+        <div class="emoji">🖥</div>
+        <div class="text">
+          <div class="title">Рятівник Windows</div>
+          <div class="desc">Врятував Windows 98 від вічного циклу помилок.</div>
+        </div>
+        <div class="percent">4%</div>
+      </div>
+
+      <div class="achievement">
+        <div class="emoji">📦</div>
+        <div class="text">
+          <div class="title">Коробковий Колекціонер</div>
+          <div class="desc">Зібрав усі коробки з іграми, які ніхто не купував після 2010 року.</div>
+        </div>
+        <div class="percent">6%</div>
+      </div>
+
+      <div class="achievement rare">
+        <div class="emoji">🧩</div>
+        <div class="text">
+          <div class="title">Пазлінатор</div>
+          <div class="desc">Зібрав 1000 шматочків пазлу за один день, не встаючи з крісла.</div>
+        </div>
+        <div class="percent">3%</div>
+      </div>
+ </div>
+      <div class="achievement">
+        <div class="emoji">🌐</div>
+        <div class="text">
+          <div class="title">Веб-Ніндзя</div>
+          <div class="desc">Відкрив усі приховані елементи вебсайту за допомогою DevTools.</div>
+        </div>
+        <div class="percent">9%</div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Правый блок: ссылки (отдельный) -->
+  <div class="links-right-absolute">
+    <h2>Корисні посилання</h2>
+    <ul>
+      <li><a href="#">Роботи автора</a></li>
+      <li><a href="achievement.html">Всі досягнення</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Steam</a></li>
+      <li><a href="#">Spotify</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<style>
+.achievements-section {
+  position: relative;
+  width: 74%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Левый блок с ачивками */
+.achievements-links-wrapper {
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  
+}
+
+/* Сетка ачивок вертикально */
+.achievements-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.achievement
+ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(28,28,28,0.85);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+   transition: transform 0.2s;	
+}
+.achievement:hover {
+  transform: scale(1.03);
+}
+.achievement.rare {
+  border-color: gold;
+}
+
+.achievement .emoji { font-size: 50px; }
+.achievement .text { flex: 1; margin: 0 12px; }
+.achievement .title { font-weight: bold; color: #f3f4f6; margin-bottom: 4px; }
+.achievement .desc { font-size: 14px; color: #d1d5db; }
+.achievement .percent { font-size: 50px; color: #9ca3af; font-weight: bold; }
+
+/* Правый блок ссылок */
+.links-right-absolute {
+  position: absolute;
+  top: 0; /* выровнено по верхнему краю блока с ачивками */
+  left: calc(100% + 20px); /* справа от блока ачивок с отступом */
+  width: 200px;
+  background-color: rgba(28,28,28,0.85);
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.links-right-absolute h2 { font-size: 18px; color: #f3f4f6; margin-bottom: 10px; }
+.links-right-absolute ul { list-style: none; padding: 0; margin: 0; }
+.links-right-absolute ul li { margin-bottom: 10px; }
+.links-right-absolute ul li a {
+  text-decoration: none;
+  color: #3b82f6;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.links-right-absolute ul li a:hover { color: gold; }
+</style>
+
+
+
+  </div>
+
+</body>
+</html>
